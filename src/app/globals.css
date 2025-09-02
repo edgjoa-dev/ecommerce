@@ -1,48 +1,8 @@
-/* globals.css */
+@import "tailwindcss";
 
-:root {
-  --radius: 0.5rem;
-}
+/* src/app/globals.css */
 
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-}
-
-.wrapper {
-  max-width: 80rem; /* equivalente a max-w-7xl */
-  margin-inline: auto;
-  padding: 1.25rem; /* p-5 */
-  padding-inline: 2.5rem; /* md:px-10 */
-  width: 100%;
-}
-
-.flex-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.h1-bold {
-  font-weight: 700;
-  font-size: 1.875rem; /* text-3xl */
-}
-@media (min-width: 1024px) {
-  .h1-bold {
-    font-size: 2.25rem; /* lg:text-4xl */
-  }
-}
-
+/* 🎨 Variables de colores (light & dark) */
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -98,7 +58,68 @@ body {
   --chart-5: 340 75% 55%;
 }
 
+/* 🌍 Estilos globales */
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: system-ui, sans-serif;
+}
+
+/* 🔧 Utilidades personalizadas (antes estaban con @apply) */
+.wrapper {
+  max-width: 80rem; /* equivalente a max-w-7xl */
+  margin-inline: auto;
+  padding: 1.25rem; /* p-5 */
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    padding-inline: 2.5rem; /* md:px-10 */
+  }
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1-bold {
+  font-weight: 700;
+  font-size: 1.875rem; /* text-3xl */
+}
+@media (min-width: 1024px) {
+  .h1-bold {
+    font-size: 2.25rem; /* lg:text-4xl */
+  }
+}
+
+.h2-bold {
+  font-weight: 700;
+  font-size: 1.5rem; /* text-2xl */
+}
+@media (min-width: 1024px) {
+  .h2-bold {
+    font-size: 1.875rem; /* lg:text-3xl */
+  }
+}
+
+.h3-bold {
+  font-weight: 700;
+  font-size: 1.25rem; /* text-xl */
+}
+@media (min-width: 1024px) {
+  .h3-bold {
+    font-size: 1.5rem; /* lg:text-2xl */
+  }
 }
